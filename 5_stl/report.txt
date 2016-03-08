@@ -1,0 +1,106 @@
+VECTOR:
+    No optimizations(O0):
+        + INDEX_SWAP (1):       0.559952, 0.576928, 0.562483, 0.562863, 0.561063
+        + INDEX_SWAP (2):       2.10411,  2.10159,  2.10848,  2.12013,  2.14252
+        + INDEX_SWAP (4):       7.81714,  7.72649,  7.69472,  7.76777,  7.80401
+
+        + INDEX_ASSIGN (1):     0.544877, 0.570582, 0.583388, 0.557729, 0.563565
+        + INDEX_ASSIGN (2):     2.3561,   2.3719,   2.34421,  2.37115,  2.34949
+        + INDEX_ASSIGN (4):     8.57127,  8.55061,  8.5067,   8.51766,  8.54947
+
+        + ITERATOR_SWAP (1):    0.650443, 0.641154, 0.664435, 0.649292, 0.6419
+        + ITERATOR_SWAP (2):    2.55614,  2.51473,  2.56791,  2.52123,  2.49876
+        + ITERATOR_SWAP (4):    9.52253,  9.52925,  9.46057,  9.50021,  9.51995
+
+        + ITERATOR_ASSIGN (1):  1.35184,  1.32578,  1.31889,  1.32351,  1.35196
+        + ITERATOR_ASSIGN (2):  5.3899,   5.42436,  5.42231,  5.46368,  5.32425
+        + ITERATOR_ASSIGN (4): 21.638,   21.5761,  21.7679,  21.6657,  21.9752
+    Maximum optimizations(O3):
+        + INDEX_SWAP (1):       0.261977, 0.265418, 0.270461, 0.270255, 0.264186
+        + INDEX_SWAP (2):       1.01472,  1.01502,  1.02421,  1.01597,  1.02924
+        + INDEX_SWAP (4):       3.56402,  3.54705,  3.5252,   3.52073,  3.5409
+
+        + INDEX_ASSIGN (1):     0.359003, 0.36465,  0.346899, 0.361384, 0.347753
+        + INDEX_ASSIGN (2):     1.24985,  1.29646,  1.28634,  1.26626,  1.30545
+        + INDEX_ASSIGN (4):     4.40168,  4.31435,  4.29132,  4.31416,  4.39103
+
+        + ITERATOR_SWAP (1):    0.263005, 0.247078, 0.245005, 0.267893, 0.252618
+        + ITERATOR_SWAP (2):    0.931586, 0.956374, 0.991383, 0.949298, 0.939838
+        + ITERATOR_SWAP (4):    3.36979,  3.34794,  3.35146,  3.36203,  3.38851
+
+        + ITERATOR_ASSIGN (1):  0.882317, 0.879039, 0.857711, 0.865171, 0.888925
+        + ITERATOR_ASSIGN (2):  3.44968,  3.47341,  3.45186,  3.47326,  3.42958
+        + ITERATOR_ASSIGN (4): 15.511,   14.0941,  13.9337,  13.7881,  13.7789
+LIST:
+    No optimizations(O0):
+        + ITERATOR_SWAP (1):    0.586028, 0.601012, 0.594541, 0.600263, 0.60202
+        + ITERATOR_SWAP (2):    2.25949,  2.2876,   2.25855,  2.28987,  2.27513
+        + ITERATOR_SWAP (4):    8.74629,  8.57697,  8.58322,  8.59308,  8.5882
+
+        + ITERATOR_ASSIGN (1):  0.835418, 0.900106, 0.877705, 0.827189, 0.843027
+        + ITERATOR_ASSIGN (2):  3.40381,  3.35227,  3.33587,  3.36916,  3.41424
+        + ITERATOR_ASSIGN (4): 13.6152,  13.7913,  13.4649,  13.7076,  13.7197
+    Maximum optimizations(O3):
+        + ITERATOR_SWAP (1):    0.266045, 0.276765, 0.277567, 0.272516, 0.271365
+        + ITERATOR_SWAP (2):    1.013,    1.00443,  1.00556,  1.01922,  1.03031
+        + ITERATOR_SWAP (4):    3.78002,  3.77516,  3.81445,  3.73402,  3.7647
+
+        + ITERATOR_ASSIGN (1):  0.443259, 0.444366, 0.454049, 0.430189, 0.451715
+        + ITERATOR_ASSIGN (2):  1.75689,  1.7382,   1.73279,  1.73047,  1.75245
+        + ITERATOR_ASSIGN (4):  6.90149,  6.93989,  7.03418,  6.92593,  6.96013
+
+TESTING MACHINE:
+>> cat /proc/cpuinfo
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 23
+model name      : Intel(R) Core(TM)2 Duo CPU     P9300  @ 2.26GHz
+stepping        : 6
+microcode       : 0x610
+cpu MHz         : 800.000
+cache size      : 6144 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 2
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 10
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs            :
+bogomips        : 4521.85
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 36 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 23
+model name      : Intel(R) Core(TM)2 Duo CPU     P9300  @ 2.26GHz
+stepping        : 6
+microcode       : 0x610
+cpu MHz         : 800.000
+cache size      : 6144 KB
+physical id     : 0
+siblings        : 2
+core id         : 1
+cpu cores       : 2
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 10
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs            :
+bogomips        : 4521.85
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 36 bits physical, 48 bits virtual
+power management:
